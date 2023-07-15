@@ -1,6 +1,6 @@
-import React from "react";
-import "./Calculator.css";
-import Display from "./chiled";
+import React from 'react';
+import './Calculator.css';
+import Display from './chiled';
 
 function Calculator() {
   return (
