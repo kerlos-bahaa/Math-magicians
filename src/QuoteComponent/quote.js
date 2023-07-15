@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "./quote.css";
+import React, { useState, useEffect } from 'react';
+import './quote.css';
 
 export default function QuoteComponent() {
   const [loading, setLoading] = useState(true);
@@ -9,17 +9,17 @@ export default function QuoteComponent() {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const category = "happiness";
-      const apiKey = "ymCbBE03nErvlKzbVx1/bQ==cOiHM9eT0XjlnLNn";
+      const category = 'happiness';
+      const apiKey = 'ymCbBE03nErvlKzbVx1/bQ==cOiHM9eT0XjlnLNn';
 
       try {
         const response = await fetch(
           `https://api.api-ninjas.com/v1/quotes?category=${category}`,
           {
             headers: {
-              "X-Api-Key": apiKey,
+              'X-Api-Key': apiKey,
             },
-          }
+          },
         );
         const data = await response.json();
         setQuote(data[0]);

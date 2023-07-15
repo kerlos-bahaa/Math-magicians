@@ -1,22 +1,22 @@
-import Big from "big.js";
+import Big from 'big.js';
 
 export default function operate(numberOne, numberTwo, operation) {
   const one = Big(numberOne);
   const two = Big(numberTwo);
   switch (operation) {
-    case "+":
+    case '+':
       return one.plus(two).toString();
-    case "-":
+    case '-':
       return one.minus(two).toString();
-    case "x":
+    case 'x':
       return one.times(two).toString();
-    case "÷":
+    case '÷':
       try {
         return one.div(two).toString();
       } catch (err) {
         return "Can't divide by 0.";
       }
-    case "%":
+    case '%':
       try {
         return one.mod(two).toString();
       } catch (err) {
